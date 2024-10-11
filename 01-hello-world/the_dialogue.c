@@ -7,4 +7,5 @@ int main() {
 	printf("How do you know my name?\n");
 	printf("I told you I am very smart...\n");
 	printf("Creepy...");
+	return 0;
 }
