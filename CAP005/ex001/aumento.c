@@ -10,6 +10,6 @@ int main() {
 		aumento *= 2;
 		printf("salario em %d: R$%.2f\n", i, salario_atual);
 	}
-	printf("\nSALÁRIO 2025: R$%.2f\n", salario_atual)
+	printf("\nSALÁRIO 2025: R$%.2f\n", salario_atual);
 	return 0;
 }
