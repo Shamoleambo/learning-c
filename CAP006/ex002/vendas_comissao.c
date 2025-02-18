@@ -8,7 +8,7 @@ int main() {
 		printf("Forneça a quantidade vendida na posição %d: ", i);
 		scanf("%d", &qtd_vendas[i]);
 		printf("Forneça o preço da venda na posição %d: ", i);
-		scanf("%d", &preco_vendas);
+		scanf("%f", &preco_vendas[i]);
 	}
 
 	for(int i = 0; i < 10; i++){
