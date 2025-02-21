@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdbool.h>
 
 int main() {
-	int vet_1[10], vet_2[10], uniao[10] = {0};
+	int vet_1[10], vet_2[10], uniao[10] = {0}, diferenca[10] = {0};
 
 	printf("Preencha o primeiro vetor: \n");
 	for(int i = 0; i < 10; i++) {
@@ -22,12 +22,25 @@ int main() {
 			}
 		}
 	}
+	
+	for(int i = 0; i < 10; i++) {
+		bool nao_presente = true;
+		for(int j = 0; j< 10; j++) {
+			if(vet_1[i] == vet_2[j]) {
+				nao_presente = false;
+			}
+		}
+		if(nao_presente) {
+			diferenca[i] = vet_1[i];
+		}
+	}
 
 	printf("\n\n");
 	for(int i = 0; i < 10; i++) {
-		printf("%d\n", uniao[i]);
+		printf("%d\n", diferenca[i]);
 	}
+
 	printf("\n\n");
-			
+
 	return 0;
 }
