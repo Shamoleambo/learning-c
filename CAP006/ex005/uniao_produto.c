@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 int main() {
-	int vet_1[10], vet_2[10], uniao[10] = {0}, diferenca[10] = {0};
+	int vet_1[10], vet_2[10], uniao[10] = {0}, diferenca[10] = {0}, soma[10];
 
 	printf("Preencha o primeiro vetor: \n");
 	for(int i = 0; i < 10; i++) {
@@ -35,9 +35,14 @@ int main() {
 		}
 	}
 
-	printf("\n\n");
 	for(int i = 0; i < 10; i++) {
-		printf("%d\n", diferenca[i]);
+		soma[i] = vet_1[i] + vet_2[i];
+	}
+
+	printf("\n\n");
+
+	for(int i = 0; i < 10; i++) {
+		printf("%d + %d = %d\n", vet_1[i], vet_2[i], soma[i]);
 	}
 
 	printf("\n\n");
