@@ -6,7 +6,7 @@ int main() {
 	 	ou seja: encontrar o maior elemento de uma matriz
 	E exibe a matriz resultante da multiplicação*/
 
-	int mat[2][2];
+	int mat[2][2], maior_el = 0;
 	printf("Forneça os dados da matriz: \n\n");
 	
 	for(int i = 0; i < 2; i++) {
@@ -16,14 +16,30 @@ int main() {
 		}
 	}
 
+	for(int i = 0; i < 2; i++) {
+		for(int j = 0; j < 2; j++) {
+			if(i == 0 && j == 0) {
+				maior_el = mat[i][j];
+			} else {
+				if(mat[i][j] > maior_el){
+					maior_el = mat[i][j];
+				}
+			}
+		}
+	}	
 
-	/*Testando se a matriz está sendo preenchida corretamente: */
+
+
+
 	for(int i = 0; i < 2; i++){
 		for(int j = 0; j < 2; j++) {
 			printf("%d  ", mat[i][j]);
 		}
 		printf("\n");
 	}
+
+	printf("\n\n");
+	printf("O maior elemento da matriz é o número: %d", maior_el);
 	printf("\n");
 	return 0;
 }
