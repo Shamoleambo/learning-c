@@ -6,7 +6,7 @@ int main() {
 	 	ou seja: encontrar o maior elemento de uma matriz
 	E exibe a matriz resultante da multiplicação*/
 
-	int mat[2][2]
+	int mat[2][2];
 	printf("Forneça os dados da matriz: \n\n");
 	
 	for(int i = 0; i < 2; i++) {
