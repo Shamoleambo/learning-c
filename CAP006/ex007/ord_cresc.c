@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int vet[8], count;
+	int vet[8] = {0,0,0,0,0,0,0,0}, count;
 
 	printf("Preencha o vetor: \n");
 	for(int i = 0; i < 8; i++) {
@@ -9,23 +9,18 @@ int main() {
 			printf("Valor %d: ", i + 1);
 			scanf("%d", &vet[0]);
 		} else {
+			count = i;
 			int temp;
 			printf("Valor %d: ", i + 1);
 			scanf("%d", &temp);
 			do {
-				count  = i;
-				int temp_2;
-				if(temp < vet[count - 1]) {
-					temp_2 = vet[count - 1];
-					vet[count - 1] = temp;
-					vet[count] = temp_2;
-					count--;
-				} else if(count ==i) {
+				if(temp > vet[count - 1]) {
 					vet[count] = temp;
 					count = 0;
 				} else {
-					count = 0;
-				}
+					vet[count] = vet[count - 1];
+					count--;
+				}	
 			} while (count > 0);
 		}
 	}
