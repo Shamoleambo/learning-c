@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int notas[10][3], menores_notas[10][1], qtd_menor_p1, qtd_menor_p2, qtde_menor_p3;
+	int notas[10][3], menores_notas[10][2], qtd_menor_p1, qtd_menor_p2, qtde_menor_p3;
 
 	/*Preencher matriz com notas p1, p2, p3 de 10 alunos;
 	 * exibir menor nota dentre as 3 de cada aluno;
@@ -32,6 +32,24 @@ int main() {
 		}
 		printf("\n");
 	}
+
+	printf("\n\n");
+
+	for(int i = 0; i < 10; i++) {
+		int temp = 0;
+		for(int j = 0; j < 3; j++) {
+			if(j == 0) temp = notas[i][j];
+			else if(notas[i][j] < temp) temp = notas[i][j];
+		}
+		menores_notas[i][0] = i + 1;
+		menores_notas[i][1] = temp;
+	}
+
+	printf("\n\nMenores notas de cada aluno: \n\n");
+	for(int i = 0; i < 10; i++) {
+		printf("Aluno %d / menor nota: %d\n", menores_notas[i][0], menores_notas[i][1]);
+	}
+
 
 	printf("\n\n");
 			
