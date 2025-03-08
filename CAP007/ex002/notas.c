@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int notas[10][3], menores_notas[10][2], qtd_menor_p1, qtd_menor_p2, qtde_menor_p3, menor_p1, menor_p2, menor_p3;
+	int notas[10][3], menores_notas[10][2], qtd_menor_p1, qtd_menor_p2, qtd_menor_p3, menor_p1, menor_p2, menor_p3;
 
 	/*Preencher matriz com notas p1, p2, p3 de 10 alunos;
 	 * exibir menor nota dentre as 3 de cada aluno;
@@ -80,7 +80,9 @@ int main() {
 
 	printf("\n\n");
 
-	printf("Qtd menores notas P1: %d");
+	printf("Menor nota P1: %d / Qtde: %d\n", menor_p1, qtd_menor_p1);
+	printf("Menor nota P2: %d / Qtde: %d\n", menor_p2, qtd_menor_p2);
+	printf("Menor nota P3: %d / Qtde: %d\n", menor_p3, qtd_menor_p3);
 			
 	return 0;
 }
